@@ -1,0 +1,2 @@
+plane.adb:81:09: high: "Text_IO.File_System" must be listed in the Global aspect of "IncreasingAltitude" (SPARK RM 6.1.4(14))[#1]
+plane.adb:99:09: high: "Text_IO.File_System" must be listed in the Global aspect of "DecreasingAltitude" (SPARK RM 6.1.4(14))[#0]

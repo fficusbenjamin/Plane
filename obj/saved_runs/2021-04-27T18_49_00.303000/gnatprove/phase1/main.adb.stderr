@@ -1,0 +1,5 @@
+plane.ads:99:06: invalid mode selector
+plane.ads:99:33: malformed global list
+plane.ads:100:06: invalid mode selector
+plane.ads:100:23: malformed global list
+plane.ads:100:42: missing ")"

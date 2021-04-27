@@ -1,0 +1,5 @@
+plane.adb:36:10: high: "Text_IO.File_System" must be listed in the Global aspect of "SpeedLimits" (SPARK RM 6.1.4(14))[#4]
+plane.adb:77:07: high: "Text_IO.File_System" must be listed in the Global aspect of "IncreasingSpeed" (SPARK RM 6.1.4(14))[#3]
+plane.adb:97:07: high: "Text_IO.File_System" must be listed in the Global aspect of "DecreasingSpeed" (SPARK RM 6.1.4(14))[#2]
+plane.ads:98:33: warning: "Text_IO.File_System" is not modified, could be INPUT[#0]
+plane.ads:98:33: low: unused global "Text_IO.File_System"[#1]

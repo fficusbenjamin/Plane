@@ -1,0 +1,2 @@
+plane.ads:98:33: warning: "Text_IO.File_System" is not modified, could be INPUT[#0]
+plane.ads:98:33: low: unused global "Text_IO.File_System"[#1]

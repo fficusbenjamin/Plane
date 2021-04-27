@@ -1,0 +1,23 @@
+[GENERATED OBJECT FILE]
+b__main.o
+[PROJECT FILES]
+C:\Users\Francesco\Desktop\Plane\plane.gpr
+20210426121352 28fd9e4b17f2a4a4cf313546d30e2f81
+[BOUND OBJECT FILES]
+C:\Users\Francesco\Desktop\Plane\obj\plane.o
+C:\Users\Francesco\Desktop\Plane\obj\main.o
+[GENERATED SOURCE FILES]
+b__main.ads
+b__main.adb
+b__main.ali
+[RESULTING OPTIONS]
+-LC:\Users\Francesco\Desktop\Plane\obj\
+-LC:\Users\Francesco\Desktop\Plane\obj\
+-LC:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/
+-static
+-static-libgcc
+C:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/libgnarl.a
+C:/gnat/2020/lib/gcc/x86_64-pc-mingw32/9.3.1/adalib/libgnat.a
+-Xlinker
+--stack=0x200000,0x1000
+-mthreads

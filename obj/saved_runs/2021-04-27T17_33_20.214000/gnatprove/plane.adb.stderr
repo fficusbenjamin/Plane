@@ -1,0 +1,2 @@
+plane.adb:59:10: high: "Text_IO.File_System" must be listed in the Global aspect of "LandingProcedure" (SPARK RM 6.1.4(14))[#0]
+plane.ads:62:14: medium: postcondition might fail, cannot prove Jet.Wheels = Deployed (e.g. when Jet = (CockpitDoors => Open, ExternalDoors => Open, Ignition => On, Tank => 0, FuelLight => GREEN, AltiLight => GREEN, SpeedLight => GREEN, Status => Landing, Velocity => 200, Height => 200, Wheels => Retract))[#1]

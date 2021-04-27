@@ -1,0 +1,2 @@
+main.adb:83:06: missing "end if;" for "if" at line 81
+main.adb:83:06: missing "end loop;" for "loop" at line 80
