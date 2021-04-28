@@ -1,5 +1,5 @@
 with Ada.Text_IO; use Ada.Text_IO;
-
+with Wind; use Wind;
 
 package Plane with SPARK_Mode is
 
@@ -32,10 +32,12 @@ package Plane with SPARK_Mode is
    Jet : Plane := (CockpitDoors => Open, ExternalDoors => Open, Ignition => Off, Tank => 100, Status => Idle,
                    FuelLight => GREEN,AltiLight => GREEN,SpeedLight => GREEN, Height => 0, Velocity =>0, Wheels => Deployed);
 
+   Eolo : Weather := (Flow);
+
 
    procedure TakingOff with
-     Global =>(In_Out => Jet),
-     Pre => Jet.Status = Idle and Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and Jet.Tank > 25 and Jet.Ignition = On,
+     Global =>(In_Out => Jet, Proof_In => Eolo),
+     Pre => Jet.Status = Idle and Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and Jet.Tank > 25 and Jet.Ignition = On and Eolo.strgt < UnsafeTreshold,
      Post => Jet.Status = TakingOff;
 
    procedure Flying with
