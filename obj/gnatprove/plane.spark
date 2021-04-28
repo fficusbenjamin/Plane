@@ -401,6 +401,8 @@
             }
           },
           "transformations": {
+            "trivial_true": [
+            ]
           }
         }
       ],
@@ -3145,17 +3147,17 @@
     }
   ],
   "timings": {
-    "codepeer results": 1.73500005621463E-03,
-    "init_why_sections": 5.86099980864674E-04,
-    "globals/properties (advanced)": 1.94138996303082E-02,
+    "codepeer results": 1.72970001585782E-03,
+    "init_why_sections": 6.52200018521398E-04,
+    "globals/properties (advanced)": 2.99242995679379E-02,
     "gnatwhy3.run_vcs": 0.00000000000000E+00,
-    "flow analysis": 5.47687001526356E-02,
-    "marking": 5.89529983699322E-03,
-    "translation of standard": 4.31660003960133E-03,
+    "flow analysis": 6.94029033184052E-02,
+    "marking": 5.77059993520379E-03,
+    "translation of standard": 4.07030014321208E-03,
     "gnatwhy3.register_vcs": 0.00000000000000E+00,
-    "globals (basic)": 1.30393002182245E-02,
+    "globals (basic)": 1.34800001978874E-02,
     "gnatwhy3.schedule_vcs": 0.00000000000000E+00,
-    "gnatwhy3.save_session": 1.56250000000000E-02,
-    "gnatwhy3.init": 4.09375000000000E+00
+    "gnatwhy3.save_session": 3.12500000000000E-02,
+    "gnatwhy3.init": 4.48437500000000E+00
   }
 }

@@ -6,7 +6,7 @@ package Plane with SPARK_Mode is
    type Engine is (On, Off);
    type Doors is (Open, Closed, Locked);
    type Fuel is range 0..100;
-   type Light is (GREEN, RED, FLASHING);
+   type Light is (GREEN, AMBER, FLASHING);
    type Condition is (TakingOff, Flying, Landing, Idle, Crashed);
    type Speed is range 0..800;
    type Altitude is range 0..1000;
@@ -29,13 +29,13 @@ package Plane with SPARK_Mode is
 
    end record;
 
-   Jet : Plane := (CockpitDoors => Open, ExternalDoors => Open, Ignition => Off, Tank => 30, Status => Idle,
+   Jet : Plane := (CockpitDoors => Open, ExternalDoors => Open, Ignition => Off, Tank => 100, Status => Idle,
                    FuelLight => GREEN,AltiLight => GREEN,SpeedLight => GREEN, Height => 0, Velocity =>0, Wheels => Deployed);
 
 
    procedure TakingOff with
      Global =>(In_Out => Jet),
-     Pre => Jet.Status = Idle and Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and Jet.Tank >= 25 and Jet.Ignition = On,
+     Pre => Jet.Status = Idle and Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and Jet.Tank > 25 and Jet.Ignition = On,
      Post => Jet.Status = TakingOff;
 
    procedure Flying with

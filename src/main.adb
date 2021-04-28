@@ -36,9 +36,12 @@ procedure Main is
                   Put_Line("The Fule Tank is: "&Jet.Tank'Image);
                when others => abort Starting; abort Ongoing; abort Arriving; exit;
             end case;
-            if (Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and Jet.Ignition = On)then
+            if (Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and Jet.Ignition = On and Jet.Tank >= 25)then
                Put_Line("Plane ready to take off");
                TakingOff;
+            end if;
+            if (Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and Jet.Ignition = On and Jet.Tank < 25)then
+               Put_Line("Plane not ready to take off, Low Fuel");
             end if;
          end if;
       end loop;

@@ -861,3 +861,45 @@
     '
   output_parser: GNATprove_Parser
   timestamp: '2021-04-28T15:30:28.377000'
+'2021-04-28T15:39:28.222000':
+  category: GNATprove
+  files:
+  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    main.adb:43:73: missing ";"
+
+    gnatprove: error during generation of Global contracts
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-28T15:39:28.222000'
+'2021-04-28T15:39:40.110000':
+  category: GNATprove
+  files:
+  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-28T15:39:40.110000'
+'2021-04-28T15:53:52.436000':
+  category: GNATprove
+  files:
+  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-28T15:53:52.436000'

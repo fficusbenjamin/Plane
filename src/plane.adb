@@ -5,7 +5,7 @@ package body Plane with SPARK_Mode is
 
    procedure TakingOff is
    begin
-      if(Jet.Status = Idle and Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and Jet.Tank >= 25 and Jet.Ignition = On) then
+      if(Jet.Status = Idle and Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and Jet.Tank > 25 and Jet.Ignition = On) then
          Jet.Status := TakingOff;
       end if;
    end TakingOff;
