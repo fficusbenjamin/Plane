@@ -397,8 +397,8 @@
     " 4": "C:\\Users\\Francesco\\Desktop\\Plane\\obj\\gnatprove\\plane__speedlimits",
     " 5": "C:\\Users\\Francesco\\Desktop\\Plane\\obj\\gnatprove\\plane__altitudelimits",
     " 6": "C:\\Users\\Francesco\\Desktop\\Plane\\obj\\gnatprove\\plane__landingprocedure",
-    " 7": "C:\\Users\\Francesco\\Desktop\\Plane\\obj\\gnatprove\\plane__increasingspeed",
-    " 8": "C:\\Users\\Francesco\\Desktop\\Plane\\obj\\gnatprove\\plane__towed",
+    " 7": "C:\\Users\\Francesco\\Desktop\\Plane\\obj\\gnatprove\\plane__towed",
+    " 8": "C:\\Users\\Francesco\\Desktop\\Plane\\obj\\gnatprove\\plane__increasingspeed",
     " 9": "C:\\Users\\Francesco\\Desktop\\Plane\\obj\\gnatprove\\plane__increasingaltitude",
     " 10": "C:\\Users\\Francesco\\Desktop\\Plane\\obj\\gnatprove\\plane__decreasingspeed",
     " 11": "C:\\Users\\Francesco\\Desktop\\Plane\\obj\\gnatprove\\plane__decreasingaltitude",
@@ -1225,6 +1225,92 @@
     },
     {
       "file": "plane.adb",
+      "line": 72,
+      "col": 62,
+      "rule": "VC_RANGE_CHECK",
+      "severity": "info",
+      "entity": {
+        "name": "Plane.Towed",
+        "sloc": [
+          {
+            "file": "plane.ads",
+            "line": 69
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 96,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "plane.adb",
+      "check_line": 72,
+      "check_col": 62,
+      "session_dir": 7,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "plane.ads",
+      "line": 72,
+      "col": 14,
+      "rule": "VC_POSTCONDITION",
+      "severity": "info",
+      "entity": {
+        "name": "Plane.Towed",
+        "sloc": [
+          {
+            "file": "plane.ads",
+            "line": 69
+          }
+        ]
+      },
+      "check_tree": [
+        {
+          "proof_attempts": {
+            "CVC4": {
+              "result": "Valid",
+              "steps": 26,
+              "time": 0
+            }
+          },
+          "transformations": {
+            "trivial_true": [
+            ]
+          }
+        }
+      ],
+      "check_file": "plane.ads",
+      "check_line": 72,
+      "check_col": 14,
+      "session_dir": 7,
+      "how_proved": "prover",
+      "stats": {
+        "CVC4": {
+          "count": 1,
+          "max_steps": 1,
+          "max_time": 0.00000000000000E+00
+        }
+      }
+    },
+    {
+      "file": "plane.adb",
       "line": 78,
       "col": 36,
       "rule": "VC_RANGE_CHECK",
@@ -1256,7 +1342,7 @@
       "check_file": "plane.adb",
       "check_line": 78,
       "check_col": 36,
-      "session_dir": 7,
+      "session_dir": 8,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1299,7 +1385,7 @@
       "check_file": "plane.adb",
       "check_line": 79,
       "check_col": 32,
-      "session_dir": 7,
+      "session_dir": 8,
       "how_proved": "prover",
       "stats": {
         "CVC4": {
@@ -1341,92 +1427,6 @@
       ],
       "check_file": "plane.ads",
       "check_line": 77,
-      "check_col": 14,
-      "session_dir": 7,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "plane.adb",
-      "line": 72,
-      "col": 62,
-      "rule": "VC_RANGE_CHECK",
-      "severity": "info",
-      "entity": {
-        "name": "Plane.Towed",
-        "sloc": [
-          {
-            "file": "plane.ads",
-            "line": 69
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 96,
-              "time": 0
-            }
-          },
-          "transformations": {
-            "trivial_true": [
-            ]
-          }
-        }
-      ],
-      "check_file": "plane.adb",
-      "check_line": 72,
-      "check_col": 62,
-      "session_dir": 8,
-      "how_proved": "prover",
-      "stats": {
-        "CVC4": {
-          "count": 1,
-          "max_steps": 1,
-          "max_time": 0.00000000000000E+00
-        }
-      }
-    },
-    {
-      "file": "plane.ads",
-      "line": 72,
-      "col": 14,
-      "rule": "VC_POSTCONDITION",
-      "severity": "info",
-      "entity": {
-        "name": "Plane.Towed",
-        "sloc": [
-          {
-            "file": "plane.ads",
-            "line": 69
-          }
-        ]
-      },
-      "check_tree": [
-        {
-          "proof_attempts": {
-            "CVC4": {
-              "result": "Valid",
-              "steps": 26,
-              "time": 0
-            }
-          },
-          "transformations": {
-            "trivial_true": [
-            ]
-          }
-        }
-      ],
-      "check_file": "plane.ads",
-      "check_line": 72,
       "check_col": 14,
       "session_dir": 8,
       "how_proved": "prover",
@@ -3335,17 +3335,17 @@
     }
   ],
   "timings": {
-    "codepeer results": 1.79570005275309E-03,
-    "init_why_sections": 6.64699997287244E-04,
-    "globals/properties (advanced)": 2.14517004787922E-02,
+    "codepeer results": 1.81419996079057E-03,
+    "init_why_sections": 6.38799974694848E-04,
+    "globals/properties (advanced)": 2.14661993086338E-02,
     "gnatwhy3.run_vcs": 0.00000000000000E+00,
-    "flow analysis": 5.79613000154495E-02,
-    "marking": 5.93979982659221E-03,
-    "translation of standard": 4.13460005074739E-03,
+    "flow analysis": 6.19635991752148E-02,
+    "marking": 6.61760009825230E-03,
+    "translation of standard": 4.12630010396242E-03,
     "gnatwhy3.register_vcs": 0.00000000000000E+00,
-    "globals (basic)": 1.31660997867584E-02,
+    "globals (basic)": 1.65170002728701E-02,
     "gnatwhy3.schedule_vcs": 0.00000000000000E+00,
-    "gnatwhy3.save_session": 7.81250000000000E-02,
-    "gnatwhy3.init": 4.21875000000000E+00
+    "gnatwhy3.save_session": 1.56250000000000E-02,
+    "gnatwhy3.init": 4.78125000000000E+00
   }
 }
