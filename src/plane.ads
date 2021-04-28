@@ -65,8 +65,8 @@ package Plane with SPARK_Mode is
      Post => Jet.Wheels = Deployed;
 
    procedure Towed with
-     Global => (In_Out => Jet),
-     Pre => Jet.Status = Idle and Jet.Height = 0 and Jet.Velocity = 0,
+     Global => (In_Out => (Jet, File_System)),
+     Pre => Jet.Status = Landing and Jet.Height = 0 and Jet.Velocity = 0,
      Post => Jet.Ignition = Off;
 
    procedure IncreasingSpeed with

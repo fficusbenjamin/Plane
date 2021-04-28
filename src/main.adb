@@ -100,8 +100,9 @@ procedure Main is
             DecreasingSpeed;
             DecreasingAltitude;
             LandingProcedure;
-            if(Jet.Wheels = Deployed) then
-               Put_Line("Landing!");
+            Put_Line("Landing!");
+            if(Jet.Wheels = Deployed and Jet.Height = 0 and Jet.Velocity = 0) then
+              Towed;
             end if;
          end if;
          delay 0.5;

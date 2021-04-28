@@ -66,8 +66,9 @@ begin
 
    procedure Towed is
    begin
-      if(Jet.Status = Idle and Jet.Height = 0 and Jet.Velocity = 0) then
+      if(Jet.Status = Landing and Jet.Height = 0 and Jet.Velocity = 0) then
          Jet.Ignition := Off;
+         Put_Line("The plane is being towed, the engine is: "&Jet.Ignition'Image);
       end if;
    end Towed;
 
