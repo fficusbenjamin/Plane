@@ -1,0 +1,4 @@
+plane.adb:119:10: medium: precondition might fail, cannot prove Jet.Status = Flying[#2]
+plane.ads:42:32: warning: "Text_IO.File_System" is not modified, could be INPUT[#0]
+plane.ads:42:32: low: unused global "Text_IO.File_System"[#1]
+plane.ads:95:14: medium: postcondition might fail, cannot prove Jet.Status = Flying (e.g. when Jet = (CockpitDoors => Open, ExternalDoors => Open, Ignition => On, Tank => 0, FuelLight => GREEN, AltiLight => GREEN, SpeedLight => GREEN, Status => TakingOff, Velocity => 0, Height => 0, Wheels => Deployed))[#3]

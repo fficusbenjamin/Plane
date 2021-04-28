@@ -4,10 +4,10 @@ with Ada.Text_IO; use Ada.Text_IO;
 package Plane with SPARK_Mode is
 
    type Engine is (On, Off);
-   type Doors is (Open, Locked);
+   type Doors is (Open, Closed, Locked);
    type Fuel is range 0..100;
    type Light is (GREEN, RED, FLASHING);
-   type Condition is (TakingOff, Flying, Landing, Idle);
+   type Condition is (TakingOff, Flying, Landing, Idle, Crashed);
    type Speed is range 0..800;
    type Altitude is range 0..1000;
    type LandingGear is (Deployed, Retract);
@@ -29,7 +29,7 @@ package Plane with SPARK_Mode is
 
    end record;
 
-   Jet : Plane := (CockpitDoors => Open, ExternalDoors => Open, Ignition => Off, Tank => 100, Status => Idle,
+   Jet : Plane := (CockpitDoors => Open, ExternalDoors => Open, Ignition => Off, Tank => 30, Status => Idle,
                    FuelLight => GREEN,AltiLight => GREEN,SpeedLight => GREEN, Height => 0, Velocity =>0, Wheels => Deployed);
 
 
@@ -89,10 +89,6 @@ package Plane with SPARK_Mode is
      Pre => Jet.Status = Flying and Jet.Height <= 1000 and Jet.Height > 300,
      Post => Jet.Height = Jet.Height'Old - 20;
 
-   procedure Stable with
-     Global => (In_Out => Jet),
-     Pre => Jet.Status = Flying and Jet.Height <= 8000 and Jet.Height > 500 and Jet.Velocity <= 600 and Jet.Velocity > 300,
-     Post => Jet.Status = Flying;
 
    procedure BurningFuel with
      Global => (In_Out => Jet),

@@ -1,0 +1,31 @@
+{
+  "spark": [
+    {
+      "name": "Main",
+      "sloc": [
+        {
+          "file": "main.adb",
+          "line": 4
+        }
+      ],
+      "spark": "no"
+    }
+  ],
+  "flow": [
+  ],
+  "session_map": {
+  },
+  "proof": [
+  ],
+  "assumptions": [
+  ],
+  "timings": {
+    "codepeer results": 9.89999989542412E-06,
+    "init_why_sections": 5.91200019698590E-04,
+    "globals/properties (advanced)": 2.88449004292488E-02,
+    "flow analysis": 1.52199994772673E-04,
+    "marking": 2.21248995512724E-02,
+    "translation of standard": 3.90119990333915E-03,
+    "globals (basic)": 2.01181992888451E-02
+  }
+}

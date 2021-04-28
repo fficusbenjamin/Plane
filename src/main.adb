@@ -62,7 +62,7 @@ procedure Main is
    task body Ongoing is
    begin
       loop
-         if (Jet.Status = Flying) then
+         if (Jet.Status = Flying and Jet.Tank > 0) then
             Put_Line("FLYING YAYYYY");
             Get_Line(Str, Last);
             case Str(1) is
@@ -75,7 +75,9 @@ procedure Main is
             end case;
             SpeedLimits;
             AltitudeLimits;
+
          end if;
+
 
       end loop;
    end Ongoing;
@@ -83,13 +85,23 @@ procedure Main is
    task body WarningSystem is
    begin
       loop
-         if(Jet.Status = Flying) then
+         if(Jet.Status = Flying and Jet.Tank /= 0) then
             BurningFuel;
-
             Put_Line("Fuel Left is: "&Jet.Tank'Image);
             LowFuel;
             delay 10.0;
          end if;
+         if(Jet.Status = Flying and Jet.Tank = 0)then
+            Put_Line("Empty Fuel Tank! Crashing!");
+            DecreasingAltitude;
+            DecreasingSpeed;
+            delay 0.5;
+            if(Jet.Status = Flying and Jet.Tank = 0 and Jet.Height = 0 and Jet.Velocity = 0 and Jet.FuelLight = FLASHING)then
+               Put_Line("The plane has crashed");
+               abort Starting; abort Boarding; abort Arriving; abort Ongoing; exit;
+            end if;
+         end if;
+
       end loop;
    end WarningSystem;
 
@@ -102,7 +114,7 @@ procedure Main is
             LandingProcedure;
             Put_Line("Landing!");
             if(Jet.Wheels = Deployed and Jet.Height = 0 and Jet.Velocity = 0) then
-              Towed;
+               Towed;
             end if;
          end if;
          delay 0.5;

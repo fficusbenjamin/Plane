@@ -1,0 +1,2 @@
+plane.adb:118:04: no "begin" for this "end"
+plane.adb:120:04: declarations must come before "begin"
