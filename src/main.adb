@@ -92,8 +92,14 @@ procedure Main is
    task body WarningSystem is
    begin
       loop
-         if(Jet.Status = Flying and Jet.Tank /= 0) then
+         if(Jet.Status = Flying and Jet.Tank /= 0 and Eolo.dir = Down) then
             BurningFuel;
+            Put_Line("Fuel Left is: "&Jet.Tank'Image);
+            LowFuel;
+            delay 10.0;
+         end if;
+         if(Jet.Status = Flying and Jet.Tank /= 0 and Eolo.dir = Up) then
+            UpwindBF;
             Put_Line("Fuel Left is: "&Jet.Tank'Image);
             LowFuel;
             delay 10.0;

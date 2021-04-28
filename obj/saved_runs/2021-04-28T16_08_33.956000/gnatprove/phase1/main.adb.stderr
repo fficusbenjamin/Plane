@@ -1,0 +1,3 @@
+plane.ads:35:11: subtype mark required in this context
+plane.ads:35:11: found "wind" declared at wind.ads:1
+wind.ads:3:33: missing ";"

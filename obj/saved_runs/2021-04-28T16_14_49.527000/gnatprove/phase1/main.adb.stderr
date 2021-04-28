@@ -1,0 +1,2 @@
+main.adb:39:132: "UnsafeTreshold" is not visible (more references follow)
+main.adb:39:132: non-visible declaration at wind.ads:6

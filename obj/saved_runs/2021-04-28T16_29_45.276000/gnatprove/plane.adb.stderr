@@ -1,0 +1,4 @@
+plane.adb:115:53: medium: Proof_In global "Eolo.dir" can only be used in assertions (SPARK RM 6.1.4(18))[#0]
+plane.adb:118:53: medium: Proof_In global "Eolo.dir" can only be used in assertions (SPARK RM 6.1.4(18))[#1]
+plane.adb:119:31: medium: range check might fail (e.g. when Jet = (CockpitDoors => Open, ExternalDoors => Open, Ignition => On, Tank => 10, FuelLight => GREEN, AltiLight => GREEN, SpeedLight => GREEN, Status => Flying, Velocity => 0, Height => 0, Wheels => Deployed))[#2]
+plane.ads:98:14: medium: postcondition might fail, cannot prove Jet.Tank = Jet.Tank'Old - 10 (e.g. when Jet = (CockpitDoors => Open, ExternalDoors => Open, Ignition => On, Tank => 0, FuelLight => GREEN, AltiLight => GREEN, SpeedLight => GREEN, Status => Flying, Velocity => 0, Height => 0, Wheels => Deployed))[#3]

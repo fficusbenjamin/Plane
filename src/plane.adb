@@ -115,8 +115,13 @@ package body Plane with SPARK_Mode is
       if(Jet.Status = Flying and Jet.Tank >= 10)then
          Jet.Tank := Jet.Tank -10;
       end if;
-
    end BurningFuel;
 
+   procedure UpwindBF is
+   begin
+      if(Jet.Status = Flying and Jet.Tank >= 10)then
+         Jet.Tank := Jet.Tank -20;
+      end if;
+   end UpwindBF;
 
 end Plane;

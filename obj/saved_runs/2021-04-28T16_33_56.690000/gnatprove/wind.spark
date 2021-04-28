@@ -1,0 +1,57 @@
+{
+  "spark": [
+    {
+      "name": "wind",
+      "sloc": [
+        {
+          "file": "wind.ads",
+          "line": 1
+        }
+      ],
+      "spark": "all"
+    },
+    {
+      "name": "wind.Flow",
+      "sloc": [
+        {
+          "file": "wind.ads",
+          "line": 15
+        }
+      ],
+      "spark": "all"
+    }
+  ],
+  "flow": [
+  ],
+  "session_map": {
+  },
+  "proof": [
+  ],
+  "assumptions": [
+    {
+      "assumptions": [
+      ],
+      "claim": {
+        "predicate": "CLAIM_EFFECTS",
+        "arg": {
+          "name": "wind.Flow",
+          "sloc": [
+            {
+              "file": "wind.ads",
+              "line": 15
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "timings": {
+    "codepeer results": 3.11000003421213E-05,
+    "init_why_sections": 5.83200016990304E-04,
+    "globals/properties (advanced)": 4.05400001909584E-04,
+    "flow analysis": 1.74249999690801E-03,
+    "marking": 2.44800001382828E-04,
+    "translation of standard": 5.03249978646636E-03,
+    "globals (basic)": 2.41500005358830E-04
+  }
+}

@@ -1,0 +1,42 @@
+Summary of SPARK analysis
+=========================
+
+----------------------------------------------------------------------------------------------
+SPARK Analysis results        Total        Flow   CodePeer      Provers   Justified   Unproved
+----------------------------------------------------------------------------------------------
+Data Dependencies                12          11          .            .           .          1
+Flow Dependencies                 .           .          .            .           .          .
+Initialization                    .           .          .            .           .          .
+Non-Aliasing                      .           .          .            .           .          .
+Run-time Checks                  23           .          .    23 (CVC4)           .          .
+Assertions                        .           .          .            .           .          .
+Functional Contracts             12           .          .    12 (CVC4)           .          .
+LSP Verification                  .           .          .            .           .          .
+Termination                       .           .          .            .           .          .
+Concurrency                       .           .          .            .           .          .
+----------------------------------------------------------------------------------------------
+Total                            47    11 (23%)          .     35 (74%)           .     1 (2%)
+
+
+max steps used for successful proof: 1
+
+Analyzed 3 units
+in unit main, 0 subprograms and packages out of 1 analyzed
+  Main at main.adb:4 skipped
+in unit plane, 13 subprograms and packages out of 13 analyzed
+  Plane at plane.ads:4 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  Plane.AltitudeLimits at plane.ads:59 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (7 checks)
+  Plane.BurningFuel at plane.ads:95 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Plane.DecreasingAltitude at plane.ads:89 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
+  Plane.DecreasingSpeed at plane.ads:84 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
+  Plane.Flying at plane.ads:43 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Plane.IncreasingAltitude at plane.ads:79 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
+  Plane.IncreasingSpeed at plane.ads:74 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (3 checks)
+  Plane.LandingProcedure at plane.ads:64 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (1 checks)
+  Plane.LowFuel at plane.ads:49 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+  Plane.SpeedLimits at plane.ads:54 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (7 checks)
+  Plane.TakingOff at plane.ads:38 flow analyzed (0 errors, 1 checks and 0 warnings) and proved (1 checks)
+  Plane.Towed at plane.ads:69 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (2 checks)
+in unit wind, 2 subprograms and packages out of 2 analyzed
+  wind at wind.ads:1 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)
+  wind.Flow at wind.ads:15 flow analyzed (0 errors, 0 checks and 0 warnings) and proved (0 checks)

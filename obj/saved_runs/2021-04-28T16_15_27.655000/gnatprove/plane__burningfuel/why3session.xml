@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE why3session PUBLIC "-//Why3//proof session v5//EN"
+"http://why3.lri.fr/why3session.dtd">
+<why3session shape_version="6">
+<prover id="0" name="altergo" version="1.30-gnatprove" timelimit="60" steplimit="0" memlimit="2000"/>
+<prover id="1" name="Z3" version="4.5.1-gnatprove" timelimit="60" steplimit="0" memlimit="2000"/>
+<prover id="2" name="CVC4" version="1.6-gnatprove" timelimit="60" steplimit="0" memlimit="2000"/>
+<prover id="3" name="CVC4_CE" version="1.6-gnatprove" timelimit="10" steplimit="0" memlimit="2000"/>
+<file format="gnat-json" proved="true">
+<path name=".."/><path name="plane__burningfuel.gnat-json"/>
+<theory name="Plane__burningfuel__subprogram_def" proved="true">
+ <goal name="def&#39;vc" expl="VC for def" proved="true">
+ <transf name="split_goal_wp_conj" proved="true" >
+  <goal name="def&#39;vc.0" expl="postcondition" proved="true">
+  <proof prover="2" obsolete="true"><result status="valid" steps="70"/></proof>
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+  <goal name="def&#39;vc.1" expl="postcondition" proved="true">
+  <proof prover="0" obsolete="true"><result status="unknown"/></proof>
+  <proof prover="1" obsolete="true"><result status="unknown" steps="61286"/></proof>
+  <proof prover="2" obsolete="true"><result status="unknown" steps="122"/></proof>
+  <proof prover="3" obsolete="true"><result status="unknown" steps="146"/></proof>
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+  <goal name="def&#39;vc.2" expl="postcondition" proved="true">
+  <proof prover="2" obsolete="true"><result status="valid" steps="78"/></proof>
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+  <goal name="def&#39;vc.3" expl="precondition" proved="true">
+  <proof prover="2"><result status="valid" steps="51"/></proof>
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+  <goal name="def&#39;vc.4" expl="postcondition" proved="true">
+  <proof prover="2" obsolete="true"><result status="valid" steps="5"/></proof>
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+  <goal name="def&#39;vc.5" expl="postcondition" proved="true">
+  <proof prover="0" obsolete="true"><result status="unknown"/></proof>
+  <proof prover="1" obsolete="true"><result status="unknown" steps="66837"/></proof>
+  <proof prover="2"><result status="valid" steps="43"/></proof>
+  <proof prover="3" obsolete="true"><result status="unknown" steps="174"/></proof>
+  </goal>
+  <goal name="def&#39;vc.0" expl="postcondition">
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+  <goal name="def&#39;vc.13" expl="postcondition">
+  <proof prover="2" obsolete="true"><result status="valid" steps="5"/></proof>
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+  <goal name="def&#39;vc.14" expl="postcondition">
+  <proof prover="0"><result status="unknown"/></proof>
+  <proof prover="1"><result status="unknown" steps="82321"/></proof>
+  <proof prover="2"><result status="unknown" steps="424"/></proof>
+  <proof prover="3"><result status="unknown" steps="415"/></proof>
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+  <goal name="def&#39;vc.12" expl="postcondition">
+  <proof prover="0" obsolete="true"><result status="unknown"/></proof>
+  <proof prover="1" obsolete="true"><result status="unknown" steps="66918"/></proof>
+  <proof prover="2" obsolete="true"><result status="unknown" steps="150"/></proof>
+  <proof prover="3" obsolete="true"><result status="unknown" steps="174"/></proof>
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+  <goal name="def&#39;vc.11" expl="precondition">
+  <proof prover="2" obsolete="true"><result status="valid" steps="78"/></proof>
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+  <goal name="def&#39;vc.1" expl="postcondition">
+  <proof prover="0" timelimit="1" memlimit="1000" obsolete="true"><result status="unknown"/></proof>
+  <proof prover="1" timelimit="1" memlimit="1000" obsolete="true"><result status="timeout"/></proof>
+  <proof prover="2" obsolete="true"><result status="valid" steps="43"/></proof>
+  <proof prover="3" timelimit="1" memlimit="1000" obsolete="true"><result status="unknown" steps="113"/></proof>
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+  <goal name="def&#39;vc.3" expl="precondition">
+  <proof prover="2"><result status="valid" steps="51"/></proof>
+  </goal>
+  <goal name="def&#39;vc.8" expl="precondition">
+  <proof prover="0"><result status="unknown"/></proof>
+  <proof prover="1"><result status="unknown" steps="68272"/></proof>
+  <proof prover="2"><result status="unknown" steps="144"/></proof>
+  <proof prover="3" obsolete="true"><result status="unknown" steps="415"/></proof>
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+  <goal name="def&#39;vc.2" expl="postcondition">
+  <transf name="trivial_true" proved="true" >
+  </transf>
+  </goal>
+ </transf>
+ </goal>
+</theory>
+</file>
+</why3session>

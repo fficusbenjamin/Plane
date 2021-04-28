@@ -97,4 +97,9 @@ package Plane with SPARK_Mode is
      Pre => Jet.Status = Flying and Jet.Tank >= 10,
      Post => Jet.Tank = Jet.Tank'Old - 10;
 
+   procedure UpwindBF with
+     Global => (In_Out => Jet),
+     Pre => Jet.Status = Flying and Jet.Tank >= 20,
+     Post => Jet.Tank = Jet.Tank'Old - 20;
+
 end Plane;

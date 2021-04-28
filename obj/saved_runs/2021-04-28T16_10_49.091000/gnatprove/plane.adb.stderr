@@ -1,0 +1,2 @@
+plane.ads:39:06: "Eolo" is referenced in Pre but missing from the Global[#1]
+plane.ads:40:136: high: "Eolo" must be listed in the Global aspect of "TakingOff" (SPARK RM 6.1.4(14))[#0]

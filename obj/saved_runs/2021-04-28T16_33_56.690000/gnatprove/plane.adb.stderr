@@ -1,0 +1,1 @@
+plane.adb:123:31: medium: range check might fail (e.g. when Jet = (CockpitDoors => Open, ExternalDoors => Open, Ignition => On, Tank => 10, FuelLight => GREEN, AltiLight => GREEN, SpeedLight => GREEN, Status => Flying, Velocity => 0, Height => 0, Wheels => Deployed))[#0]
