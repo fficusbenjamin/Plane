@@ -1,10 +1,10 @@
-with Plane; use Plane;
-with Wind; use Wind;
+with Plane;       use Plane;
+with wind;        use wind;
 with Ada.Text_IO; use Ada.Text_IO;
 
 procedure Main is
-   Str: String (1..2);
-   Last: Natural;
+   Str  : String (1 .. 2);
+   Last : Natural;
 
    task Boarding;
    task Starting;
@@ -12,40 +12,54 @@ procedure Main is
    task Arriving;
    task WarningSystem;
 
-
    task body Boarding is
    begin
-      Put_Line("Plane Status is: " &Jet.Status'Image);
-      Put_Line("The Engine is: "&Jet.Ignition'Image);
-      Put_Line("Cockpit Doors are: "&Jet.CockpitDoors'Image);
-      Put_Line("External Doors are: "&Jet.ExternalDoors'Image);
-      Put_Line("The Fuel Tank is: "&Jet.Tank'Image);
+      Put_Line ("Plane Status is: " & Jet.Status'Image);
+      Put_Line ("The Engine is: " & Jet.Ignition'Image);
+      Put_Line ("Cockpit Doors are: " & Jet.CockpitDoors'Image);
+      Put_Line ("External Doors are: " & Jet.ExternalDoors'Image);
+      Put_Line ("The Fuel Tank is: " & Jet.Tank'Image);
       loop
-         if (Jet.Status = Idle)then
-            Get_Line(Str,Last);
-            case Str(1) is
-               when '1' => Jet.ExternalDoors := Locked;
-                  Put_Line("External Doors have been closed and locked "&Jet.ExternalDoors'Image);
-               when '2' => Jet.CockpitDoors := Locked;
-                  Put_Line("Cockpit Doors have been closed and locked "&Jet.CockpitDoors'Image);
-               when '3' => jet.Ignition := On;
-                  Put_Line("Engine Started");
-               when 's' => Put_Line("Plane Status is: " &Jet.Status'Image);
-                  Put_Line("The Engine is: "&Jet.Ignition'Image);
-                  Put_Line("Cockpit Doors are: "&Jet.CockpitDoors'Image);
-                  Put_Line("External Doors are: "&Jet.ExternalDoors'Image);
-                  Put_Line("The Fule Tank is: "&Jet.Tank'Image);
-               when others => abort Starting; abort Ongoing; abort Arriving; exit;
+         if (Jet.Status = Idle) then
+            Get_Line (Str, Last);
+            case Str (1) is
+               when '1' =>
+                  Jet.ExternalDoors := Locked;
+                  Put_Line
+                    ("External Doors have been closed and locked " &
+                       Jet.ExternalDoors'Image);
+               when '2' =>
+                  Jet.CockpitDoors := Locked;
+                  Put_Line
+                    ("Cockpit Doors have been closed and locked " &
+                       Jet.CockpitDoors'Image);
+               when '3' =>
+                  Jet.Ignition := On;
+                  Put_Line ("Engine Started");
+               when 's' =>
+                  Put_Line ("Plane Status is: " & Jet.Status'Image);
+                  Put_Line ("The Engine is: " & Jet.Ignition'Image);
+                  Put_Line ("Cockpit Doors are: " & Jet.CockpitDoors'Image);
+                  Put_Line ("External Doors are: " & Jet.ExternalDoors'Image);
+                  Put_Line ("The Fule Tank is: " & Jet.Tank'Image);
+               when others =>
+                  abort Starting;
+                  abort Ongoing;
+                  abort Arriving;
+                  exit;
             end case;
-            if (Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and Jet.Ignition = On and Jet.Tank >= 25 and Eolo.strgt < UnsafeTreshold)then
-               Put_Line("Plane ready to take off");
-               TakingOff;
+            if
+              (Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and
+                 Jet.Ignition = On and Jet.Tank >= 25)
+            then
+               Put_Line ("Plane ready to take off");
+               TakingOff(eolo);
             end if;
-            if (Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and Jet.Ignition = On and Jet.Tank < 25)then
-               Put_Line("Plane not ready to take off, Low Fuel");
-            end if;
-            if (Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and Jet.Ignition = On and Jet.Tank >= 25 and Eolo.strgt >= UnsafeTreshold)then
-               Put_Line("Plane not ready to take off, Wind too strong!");
+            if
+              (Jet.CockpitDoors = Locked and Jet.ExternalDoors = Locked and
+                 Jet.Ignition = On and Jet.Tank < 25)
+            then
+               Put_Line ("Plane not ready to take off, Low Fuel");
             end if;
          end if;
       end loop;
@@ -55,11 +69,11 @@ procedure Main is
    task body Starting is
    begin
       loop
-         if (Jet.Status = TakingOff)then
+         if (Jet.Status = TakingOff) then
             IncreasingSpeed;
             IncreasingAltitude;
             delay 0.5;
-            if(Jet.Velocity >= 200 and Jet.Height >= 300)then
+            if (Jet.Velocity >= 200 and Jet.Height >= 300) then
                Flying;
             end if;
          end if;
@@ -70,21 +84,29 @@ procedure Main is
    begin
       loop
          if (Jet.Status = Flying and Jet.Tank > 0) then
-            Put_Line("FLYING YAYYYY");
-            Get_Line(Str, Last);
-            case Str(1) is
-               when 'u' => IncreasingAltitude;
-               when 'd' => DecreasingAltitude;
-               when 'f' => IncreasingSpeed;
-               when 'b' => DecreasingSpeed;
-               when 'l' => Jet.Status := Landing;
-               when others => abort Starting; abort Boarding; abort Arriving; exit;
+            Put_Line ("FLYING YAYYYY");
+            Get_Line (Str, Last);
+            case Str (1) is
+               when 'u' =>
+                  IncreasingAltitude;
+               when 'd' =>
+                  DecreasingAltitude;
+               when 'f' =>
+                  IncreasingSpeed;
+               when 'b' =>
+                  DecreasingSpeed;
+               when 'l' =>
+                  Jet.Status := Landing;
+               when others =>
+                  abort Starting;
+                  abort Boarding;
+                  abort Arriving;
+                  exit;
             end case;
             SpeedLimits;
             AltitudeLimits;
 
          end if;
-
 
       end loop;
    end Ongoing;
@@ -92,26 +114,33 @@ procedure Main is
    task body WarningSystem is
    begin
       loop
-         if(Jet.Status = Flying and Jet.Tank /= 0 and Eolo.dir = Down) then
+         if (Jet.Status = Flying and Jet.Tank /= 0 and Eolo.dir = Down) then
             BurningFuel;
-            Put_Line("Fuel Left is: "&Jet.Tank'Image);
+            Put_Line ("Fuel Left is: " & Jet.Tank'Image);
             LowFuel;
             delay 10.0;
          end if;
-         if(Jet.Status = Flying and Jet.Tank /= 0 and Eolo.dir = Up) then
+         if (Jet.Status = Flying and Jet.Tank /= 0 and Eolo.dir = Up) then
             UpwindBF;
-            Put_Line("Fuel Left is: "&Jet.Tank'Image);
+            Put_Line ("Fuel Left is: " & Jet.Tank'Image);
             LowFuel;
             delay 10.0;
          end if;
-         if(Jet.Status = Flying and Jet.Tank = 0)then
-            Put_Line("Empty Fuel Tank! Crashing!");
+         if (Jet.Status = Flying and Jet.Tank = 0) then
+            Put_Line ("Empty Fuel Tank! Crashing!");
             DecreasingAltitude;
             DecreasingSpeed;
             delay 0.5;
-            if(Jet.Status = Flying and Jet.Tank = 0 and Jet.Height = 0 and Jet.Velocity = 0 and Jet.FuelLight = FLASHING)then
-               Put_Line("The plane has crashed");
-               abort Starting; abort Boarding; abort Arriving; abort Ongoing; exit;
+            if
+              (Jet.Status = Flying and Jet.Tank = 0 and Jet.Height = 0 and
+                 Jet.Velocity = 0 and Jet.FuelLight = FLASHING)
+            then
+               Put_Line ("The plane has crashed");
+               abort Starting;
+               abort Boarding;
+               abort Arriving;
+               abort Ongoing;
+               exit;
             end if;
          end if;
 
@@ -125,8 +154,9 @@ procedure Main is
             DecreasingSpeed;
             DecreasingAltitude;
             LandingProcedure;
-            Put_Line("Landing!");
-            if(Jet.Wheels = Deployed and Jet.Height = 0 and Jet.Velocity = 0) then
+            Put_Line ("Landing!");
+            if (Jet.Wheels = Deployed and Jet.Height = 0 and Jet.Velocity = 0)
+            then
                Towed;
             end if;
          end if;
@@ -134,9 +164,6 @@ procedure Main is
       end loop;
    end Arriving;
 
-
 begin
    null;
 end Main;
-
-

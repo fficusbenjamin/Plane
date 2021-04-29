@@ -1,0 +1,2 @@
+plane.adb:15:15: high: "Text_IO.File_System" must be listed in the Global aspect of "TakingOff" (SPARK RM 6.1.4(14))[#0]
+plane.ads:44:14: medium: postcondition might fail, cannot prove Jet.Status = TakingOff (e.g. when Jet = (CockpitDoors => Locked, ExternalDoors => Locked, Ignition => On, Tank => 26, FuelLight => GREEN, AltiLight => GREEN, SpeedLight => GREEN, Status => Idle, Velocity => 0, Height => 0, Wheels => Deployed))[#1]
