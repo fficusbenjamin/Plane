@@ -54,19 +54,29 @@ is
      Pre    => Jet.Status = Flying and Jet.Tank < 30,
      Post   => Jet.FuelLight = FLASHING;
 
-   procedure SpeedLimits with
+   procedure SpeedLimitsFast with
      Global => (In_Out => (Jet, File_System)),
-     Pre => Jet.Status = Flying and Jet.Velocity < 200 and Jet.Velocity > 800,
+     Pre => Jet.Status = Flying and Jet.Velocity > 600,
      Post   => Jet.SpeedLight = FLASHING;
 
-   procedure AltitudeLimits with
+   procedure SpeedLimitsSlow with
      Global => (In_Out => (Jet, File_System)),
-     Pre    => Jet.Status = Flying and Jet.Height < 300 and Jet.Height > 1_000,
+     Pre => Jet.Status = Flying and Jet.Velocity < 200,
+     Post   => Jet.SpeedLight = FLASHING;
+
+   procedure AltitudeLimitsHigh with
+     Global => (In_Out => (Jet, File_System)),
+     Pre    => Jet.Status = Flying and Jet.Height > 800,
+     Post   => Jet.AltiLight = FLASHING;
+
+   procedure AltitudeLimitsLow with
+     Global => (In_Out => (Jet, File_System)),
+     Pre    => Jet.Status = Flying and Jet.Height < 300,
      Post   => Jet.AltiLight = FLASHING;
 
    procedure LandingProcedure with
-     Global => (In_Out => Jet),
-     Pre    => Jet.Status = Landing and Jet.Height = 100 and Jet.Velocity = 200,
+     Global => (In_Out => (Jet, File_System)),
+     Pre    => Jet.Status = Landing and Jet.Height = 200 and Jet.Velocity = 100,
      Post   => Jet.Wheels = Deployed;
 
    procedure Towed with
@@ -86,12 +96,12 @@ is
 
    procedure DecreasingSpeed with
      Global => (In_Out => (Jet, File_System)),
-     Pre => Jet.Status = Flying and Jet.Velocity <= 800 and Jet.Velocity > 200,
+     Pre => Jet.Status = Flying and Jet.Velocity <= 800 and Jet.Velocity = 10,
      Post   => Jet.Velocity = Jet.Velocity'Old - 10;
 
    procedure DecreasingAltitude with
      Global => (In_Out => (Jet, File_System)),
-     Pre    => Jet.Status = Flying and Jet.Height <= 1000 and Jet.Height > 300,
+     Pre    => Jet.Status = Flying and Jet.Height <= 1000 and Jet.Height > 20,
      Post   => Jet.Height = Jet.Height'Old - 20;
 
    procedure BurningFuel with

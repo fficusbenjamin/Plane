@@ -1,4 +1,42 @@
-'2021-04-29T11:39:18.038000':
+'2021-04-30T08:22:31.597000':
+  category: GNATprove
+  files:
+  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    plane.adb:98:36: medium: range check might fail (e.g. when Jet = (CockpitDoors
+    => Open, ExternalDoors => Open, Ignition => On, Tank => 0, FuelLight => GREEN,
+    AltiLight => GREEN, SpeedLight => GREEN, Status => TakingOff, Velocity => 791,
+    Height => 0, Wheels => Deployed))[#0]
+
+    Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-30T08:22:31.597000'
+'2021-04-30T08:24:06.143000':
+  category: GNATprove
+  files:
+  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    plane.adb:99:36: medium: range check might fail (e.g. when Jet = (CockpitDoors
+    => Open, ExternalDoors => Open, Ignition => On, Tank => 0, FuelLight => GREEN,
+    AltiLight => GREEN, SpeedLight => GREEN, Status => TakingOff, Velocity => 791,
+    Height => 0, Wheels => Deployed))[#0]
+
+    Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-30T08:24:06.143000'
+'2021-04-30T08:27:59.270000':
   category: GNATprove
   files:
   - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
@@ -11,8 +49,27 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2021-04-29T11:39:18.038000'
-'2021-04-29T11:49:41.186000':
+  timestamp: '2021-04-30T08:27:59.270000'
+'2021-04-30T08:33:23.355000':
+  category: GNATprove
+  files:
+  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    plane.adb:99:36: medium: range check might fail (e.g. when Jet = (CockpitDoors
+    => Open, ExternalDoors => Open, Ignition => On, Tank => 0, FuelLight => GREEN,
+    AltiLight => GREEN, SpeedLight => GREEN, Status => TakingOff, Velocity => 791,
+    Height => 0, Wheels => Deployed))[#0]
+
+    Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-30T08:33:23.355000'
+'2021-04-30T08:40:31.761000':
   category: GNATprove
   files:
   - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
@@ -25,8 +82,70 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2021-04-29T11:49:41.186000'
-'2021-04-29T14:33:08.558000':
+  timestamp: '2021-04-30T08:40:31.761000'
+'2021-04-30T08:43:58.373000':
+  category: GNATprove
+  files:
+  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    plane.adb:118:36: medium: range check might fail (e.g. when Jet = (CockpitDoors
+    => Open, ExternalDoors => Open, Ignition => On, Tank => 0, FuelLight => GREEN,
+    AltiLight => GREEN, SpeedLight => GREEN, Status => Flying, Velocity => 0, Height
+    => 0, Wheels => Deployed))[#0]
+
+    Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-30T08:43:58.373000'
+'2021-04-30T08:44:24.312000':
+  category: GNATprove
+  files:
+  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    plane.adb:118:36: medium: range check might fail (e.g. when Jet = (CockpitDoors
+    => Open, ExternalDoors => Open, Ignition => On, Tank => 0, FuelLight => GREEN,
+    AltiLight => GREEN, SpeedLight => GREEN, Status => Flying, Velocity => 0, Height
+    => 0, Wheels => Deployed))[#0]
+
+    plane.ads:100:16: medium: postcondition might fail, cannot prove Jet.Velocity
+    = Jet.Velocity - 10 (e.g. when Jet = (CockpitDoors => Open, ExternalDoors => Open,
+    Ignition => On, Tank => 0, FuelLight => GREEN, AltiLight => GREEN, SpeedLight
+    => GREEN, Status => Flying, Velocity => 0, Height => 0, Wheels => Deployed))[#1]
+
+    Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-30T08:44:24.312000'
+'2021-04-30T08:48:53.726000':
+  category: GNATprove
+  files:
+  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
+  label: Basic Prove All
+  output: 'Phase 1 of 2: generation of Global contracts ...
+
+    Phase 2 of 2: flow analysis and proof ...
+
+    plane.adb:118:36: medium: range check might fail (e.g. when Jet = (CockpitDoors
+    => Open, ExternalDoors => Open, Ignition => On, Tank => 0, FuelLight => GREEN,
+    AltiLight => GREEN, SpeedLight => GREEN, Status => Flying, Velocity => 0, Height
+    => 0, Wheels => Deployed))[#0]
+
+    Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
+
+    '
+  output_parser: GNATprove_Parser
+  timestamp: '2021-04-30T08:48:53.726000'
+'2021-04-30T08:50:46.530000':
   category: GNATprove
   files:
   - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
@@ -39,22 +158,8 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2021-04-29T14:33:08.558000'
-'2021-04-29T14:36:16.665000':
-  category: GNATprove
-  files:
-  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    plane.adb:15:14: extra ";" ignored
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-04-29T14:36:16.665000'
-'2021-04-29T14:36:37.450000':
+  timestamp: '2021-04-30T08:50:46.530000'
+'2021-04-30T08:59:04.341000':
   category: GNATprove
   files:
   - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
@@ -63,89 +168,17 @@
 
     Phase 2 of 2: flow analysis and proof ...
 
-    plane.adb:15:15: high: "Text_IO.File_System" must be listed in the Global aspect
-    of "TakingOff" (SPARK RM 6.1.4(14))[#0]
-
-    plane.ads:44:14: medium: postcondition might fail, cannot prove Jet.Status = TakingOff
-    (e.g. when Jet = (CockpitDoors => Locked, ExternalDoors => Locked, Ignition =>
-    On, Tank => 26, FuelLight => GREEN, AltiLight => GREEN, SpeedLight => GREEN, Status
-    => Idle, Velocity => 0, Height => 0, Wheels => Deployed))[#1]
+    plane.adb:124:32: medium: range check might fail (e.g. when Jet = (CockpitDoors
+    => Open, ExternalDoors => Open, Ignition => On, Tank => 0, FuelLight => GREEN,
+    AltiLight => GREEN, SpeedLight => GREEN, Status => Flying, Velocity => 0, Height
+    => 11, Wheels => Deployed))[#0]
 
     Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2021-04-29T14:36:37.450000'
-'2021-04-29T14:37:10.588000':
-  category: GNATprove
-  files:
-  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    plane.adb:12:20: medium: Proof_In global "Eolo.strgt" can only be used in assertions
-    (SPARK RM 6.1.4(18))[#0]
-
-    plane.ads:44:14: medium: postcondition might fail, cannot prove Jet.Status = TakingOff
-    (e.g. when Jet = (CockpitDoors => Locked, ExternalDoors => Locked, Ignition =>
-    On, Tank => 26, FuelLight => GREEN, AltiLight => GREEN, SpeedLight => GREEN, Status
-    => Idle, Velocity => 0, Height => 0, Wheels => Deployed))[#1]
-
-    Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-04-29T14:37:10.588000'
-'2021-04-29T14:39:49.095000':
-  category: GNATprove
-  files:
-  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    plane.ads:40:47: invalid mode selector
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-04-29T14:39:49.095000'
-'2021-04-29T14:40:07.888000':
-  category: GNATprove
-  files:
-  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    plane.ads:40:47: reserved word "in" cannot be used as identifier
-
-    gnatprove: error during generation of Global contracts
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-04-29T14:40:07.888000'
-'2021-04-29T14:40:31.521000':
-  category: GNATprove
-  files:
-  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    plane.ads:44:14: medium: postcondition might fail, cannot prove Jet.Status = TakingOff
-    (e.g. when Jet = (CockpitDoors => Locked, ExternalDoors => Locked, Ignition =>
-    On, Tank => 26, FuelLight => GREEN, AltiLight => GREEN, SpeedLight => GREEN, Status
-    => Idle, Velocity => 0, Height => 0, Wheels => Deployed))[#0]
-
-    Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-04-29T14:40:31.521000'
-'2021-04-29T14:41:28.887000':
+  timestamp: '2021-04-30T08:59:04.341000'
+'2021-04-30T08:59:28.207000':
   category: GNATprove
   files:
   - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
@@ -158,32 +191,4 @@
 
     '
   output_parser: GNATprove_Parser
-  timestamp: '2021-04-29T14:41:28.887000'
-'2021-04-29T14:43:12.551000':
-  category: GNATprove
-  files:
-  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-04-29T14:43:12.551000'
-'2021-04-29T14:46:00.731000':
-  category: GNATprove
-  files:
-  - C:\Users\Francesco\Desktop\Plane\obj\gnatprove
-  label: Basic Prove All
-  output: 'Phase 1 of 2: generation of Global contracts ...
-
-    Phase 2 of 2: flow analysis and proof ...
-
-    Summary logged in C:\Users\Francesco\Desktop\Plane\obj\gnatprove\gnatprove.out
-
-    '
-  output_parser: GNATprove_Parser
-  timestamp: '2021-04-29T14:46:00.731000'
+  timestamp: '2021-04-30T08:59:28.207000'

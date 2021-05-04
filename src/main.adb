@@ -103,9 +103,10 @@ procedure Main is
                   abort Arriving;
                   exit;
             end case;
-            SpeedLimits;
-            AltitudeLimits;
-
+            SpeedLimitsFast;
+            SpeedLimitsSlow;
+            AltitudeLimitsHigh;
+            AltitudeLimitsLow;
          end if;
 
       end loop;

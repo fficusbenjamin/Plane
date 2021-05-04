@@ -9,10 +9,10 @@ is
       if
         (Jet.Status = Idle and Jet.CockpitDoors = Locked and
            Jet.ExternalDoors = Locked and Jet.Tank > 25 and Jet.Ignition = On  and
-                   Eolo.strgt < UnsafeTreshold)
+             Eolo.strgt < UnsafeTreshold)
       then
          Jet.Status := TakingOff;
-         else Put_Line("Could not take off" );
+      else Put_Line("Could not take off" );
       end if;
    end TakingOff;
 
@@ -33,7 +33,18 @@ is
       end if;
    end LowFuel;
 
-   procedure SpeedLimits is
+   procedure SpeedLimitsFast is
+   begin
+      if (Jet.Status = Flying and Jet.Velocity > 600) then
+         Jet.SpeedLight := FLASHING;
+         Put_Line
+           ("Flying to Fast!" & Jet.Velocity'Image & " " &
+              Jet.SpeedLight'Image);
+      end if;
+
+   end SpeedLimitsFast;
+
+   procedure SpeedLimitsSlow is
    begin
 
       if (Jet.Status = Flying and Jet.Velocity < 200) then
@@ -42,16 +53,19 @@ is
            ("Flying to Slow!" & Jet.Velocity'Image & " " &
               Jet.SpeedLight'Image);
       end if;
-      if (Jet.Status = Flying and Jet.Velocity > 800) then
-         Jet.SpeedLight := FLASHING;
+   end SpeedLimitsSlow;
+
+   procedure AltitudeLimitsHigh is
+   begin
+      if (Jet.Status = Flying and Jet.Height > 800) then
+         Jet.AltiLight := FLASHING;
          Put_Line
-           ("Flying to Fast!" & Jet.Velocity'Image & " " &
-              Jet.SpeedLight'Image);
+           ("Flying to High!" & Jet.Height'Image & " " & Jet.AltiLight'Image);
       end if;
 
-   end SpeedLimits;
+   end AltitudeLimitsHigh;
 
-   procedure AltitudeLimits is
+   procedure AltitudeLimitsLow is
    begin
 
       if (Jet.Status = Flying and Jet.Height < 300) then
@@ -59,19 +73,14 @@ is
          Put_Line
            ("Flying to Low!" & Jet.Height'Image & " " & Jet.AltiLight'Image);
       end if;
-      if (Jet.Status = Flying and Jet.Height > 1_000) then
-         Jet.AltiLight := FLASHING;
-         Put_Line
-           ("Flying to High!" & Jet.Height'Image & " " & Jet.AltiLight'Image);
-      end if;
-
-   end AltitudeLimits;
+   end AltitudeLimitsLow;
 
    procedure LandingProcedure is
    begin
-      if (Jet.Status = Landing and Jet.Height = 100 and Jet.Velocity = 200)
+      if (Jet.Status = Landing and Jet.Height = 200 and Jet.Velocity = 100)
       then
          Jet.Wheels := Deployed;
+         Put_Line ("Landing Gear Deployed");
       end if;
    end LandingProcedure;
 
@@ -86,6 +95,7 @@ is
 
    procedure IncreasingSpeed is
    begin
+
       Jet.Velocity := Jet.Velocity + 10;
       Put_Line ("Jet Speed is: " & Jet.Velocity'Image);
 
@@ -113,11 +123,6 @@ is
    begin
       Jet.Height := Jet.Height - 20;
       Put_Line ("Jet Height is: " & Jet.Height'Image);
-      if (Jet.Height < 25 and Jet.Wheels = Retract) then
-         Jet.Wheels := Deployed;
-         Put_Line ("Landing Gear Deployed");
-
-      end if;
    end DecreasingAltitude;
 
    procedure BurningFuel is
